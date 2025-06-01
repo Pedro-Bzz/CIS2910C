@@ -87,6 +87,9 @@ function showBookingForm(serviceType) {
         case 'computer':
             serviceName = 'Computer Lab Station';
             break;
+        case 'meeting':
+            serviceName = 'Computer Lab Station';
+            break;    
         default:
             serviceName = serviceType;
     }

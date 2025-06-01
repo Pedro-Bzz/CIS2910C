@@ -68,7 +68,7 @@
         <div class="services-section">
           <h2>West Campus Library Services</h2>
           <div class="services-grid">
-            <div class="service-card" onclick="window.open('https://libguides.valenciacollege.edu/friendly.php?s=onlinetutoring', '_blank')">
+            <div class="service-card" onclick="showTutoringBookingForm()">
               <h3>Online Tutoring</h3>
               <p>Get help with your coursework through our online tutoring service</p>
               <span class="material-icons">school</span>
@@ -76,12 +76,14 @@
             <div class="service-card" onclick="showBookingForm('study')">
               <h3>West Campus Study Rooms</h3>
               <p>Reserve a private study room for individual or group study</p>
+              <span class="material-icons">book</span>
             </div>
             <div class="service-card" onclick="showBookingForm('computer')">
               <h3>West Campus Computer Lab</h3>
               <p>Book a computer workstation in the library</p>
+              <span class="material-icons">video_label</span>
             </div>
-            <div class="service-card virtual-appointment" onclick="window.open('https://outlook.office365.com/book/ValenciaCollegeLibrary@valenciacollege.edu/', '_blank')">
+            <div class="service-card virtual-appointment" onclick="showBookingForm('meeting')">
               <h3>Make a Virtual Appointment with a West Campus Librarian</h3>
               <p>Schedule an online meeting with a librarian for research help</p>
               <span class="material-icons">video_camera_front</span>
@@ -122,5 +124,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>
