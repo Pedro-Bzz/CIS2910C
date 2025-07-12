@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book a Resource</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<h1>Book a [[${resourceType}]] Resource</h1>
+
+<form th:action="@{/booking/new}" th:object="${booking}" method="post">
+  <input type="hidden" th:name="resourceType" th:value="${resourceType}" />
+
+  <label for="resource">Select Resource:</label>
+  <select id="resource" th:field="*{resource.id}" required>
+    <option th:each="res : ${resources}" th:value="${res.id}" th:text="${res.name}">Resource Name</option>
+  </select>
+  <br/><br/>
+
+  <label for="startTime">Start Date & Time:</label>
+  <input type="datetime-local" id="startTime" th:field="*{startTime}" required />
+  <br/><br/>
+
+  <label for="studentEmail">Your Email:</label>
+  <input type="email" id="studentEmail" name="studentEmail" placeholder="Your college email" required />
+  <br/><br/>
+
+  <button type="submit">Book Now</button>
+</form>
+
+<a href="/booking/list?studentEmail=">View My Bookings</a>
+</body>
+</html>
